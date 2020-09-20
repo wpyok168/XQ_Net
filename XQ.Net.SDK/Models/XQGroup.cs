@@ -314,7 +314,7 @@
         }
 
         /// <summary>
-        /// 艾特全体成员
+        /// 艾特全体成员<para>有次数限制</para>
         /// </summary>
         /// <returns></returns>
         public string AtAllCode()
