@@ -26,6 +26,8 @@ namespace XQ.Net.SDK
         public void SetAppInfo(AppInfo app) {
             AppInfo = app;
             AppDir = Directory.GetCurrentDirectory() + "\\Config\\" + AppInfo.name + "\\";
+            if (!Directory.Exists(XQAPI.AppDir))
+                Directory.CreateDirectory(XQAPI.AppDir);
         }
 
         /// <summary>

@@ -14,9 +14,13 @@ namespace XQ.Net.SDK.EventArgs
         }
 
         /// <summary>
-        /// 来自群
+        /// 来自QQ
         /// </summary>
         public XQQQ FromQQ { get; set; }
+        /// <summary>
+        /// 来自群
+        /// </summary>
+        public XQGroup FromGroup { get; set; }
 
         /// <summary>
         /// 消息

@@ -58,6 +58,17 @@ namespace XQ_Net.Core
                         //阻塞返回2，继续返回1
                     }
                 }
+                if (eventType == (int)XQEventType.GroupTmp)//群临时消息
+                {
+                    if (Event_PrivateMsgHandler != null)
+                    {
+                        XQAppPrivateMsgEventArgs args = new XQAppPrivateMsgEventArgs(robotQQ, (int)eventType, (int)extraType, fromQQ, content, index, msgid, Common.xQAPI);
+                        args.FromGroup = new XQ.Net.SDK.Models.XQGroup(from, Common.xQAPI);
+                        Event_PrivateMsgHandler(typeof(_Event), args);
+                        return (args.Handler ? 2 : 1);
+                        //阻塞返回2，继续返回1
+                    }
+                }
 
                 if (eventType == (int)XQEventType.PluginEnable)//插件启动
                 {
@@ -95,7 +106,7 @@ namespace XQ_Net.Core
                     }
                 }
 
-                if (eventType == (int)XQEventType.AddFriend)//被解除禁言
+                if (eventType == (int)XQEventType.UnBanSpeak)//被解除禁言
                 {
                     if (Event_UnBanSpeak != null)
                     {
