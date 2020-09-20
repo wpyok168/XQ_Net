@@ -312,5 +312,14 @@
         {
             return new GroupInfo(robotQQ, Id);
         }
+
+        /// <summary>
+        /// 艾特全体成员
+        /// </summary>
+        /// <returns></returns>
+        public string AtAllCode()
+        {
+            return "[@All]";
+        }
     }
 }
