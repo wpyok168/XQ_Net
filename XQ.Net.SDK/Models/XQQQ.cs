@@ -45,7 +45,7 @@
         /// <param name="MessageType"></param>
         public void SendMsg(string robotQQ, string Message, int BubbleID, int MessageType = 1)
         {
-            XQAPI.SendMsg(robotQQ, MessageType, "", this.Id, Message, BubbleID);
+            XQAPI.SendMsgEX(robotQQ, MessageType, "", this.Id, Message, BubbleID,false);
         }
 
         /// <summary>
